@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Music Player</title>
+  <link rel="icon" href="img/music_icon.png">
+  <meta name="description" content="Music Player">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
+</head>
+
+<body class="dark-theme">
+
+  <div id="player" onmouseover="hoverEffect()" onmouseout="afterHoverEffect()">
+    <div class="album"></div>
+
+    <div class="info" id="toggleEffect">
+      <audio id="audio" src="E:\Music\Audio\Bangla\Anupam Roy - Katakuti Khela.mp3" controls>
+        <p>I'm sorry but your browser doesn't support the <code>audio</code> element, so you can't run the demo.</p>
+      </audio>
+      <div class="currently-playing">
+        <h2 class="song-name" id="song-name-id">-</h2>
+        <h3 class="artist-name">------</h3>
+      </div>
+      <div class="controls">
+        <div class="previous" onclick="prevMusic()"><i class="fas fa-backward"></i></div>
+        <div class="play" onclick="playMusic()"><i class="fas fa-play"></i></div>
+        <div class="pause" onclick="pauseMusic()"><i class="fas fa-pause"></i></div>
+        <div class="next" onclick="nextMusic()"><i class="fas fa-forward"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="drop-area">
+    <form class="my-form">
+      <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+      <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+      <label class="button" for="fileElem">Select some files</label>
+    </form>
+  </div>
+
+  <div>
+    <li id="playlist">
+
+    </li>
+  </div>
+
+  <footer>
+    <p>made by Tanjim</a>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+  <i class="fas fa-heart"></i>
+  <div class="option"><i class="fas fa-bars"></i></div>
+  <div class="volume"><i class="fas fa-volume-up"></i></div>
+  <div class="shuffle"><i class="fas fa-random"></i></div>
+  <div class="add"><i class="fas fa-plus"></i></div>
+-->
