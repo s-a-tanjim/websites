@@ -20,12 +20,12 @@
     <div class="album"></div>
 
     <div class="info" id="toggleEffect">
-      <audio id="audio" src="E:\Music\Audio\Bangla\Anupam Roy - Katakuti Khela.mp3" controls>
+      <audio id="audio" src="" controls>
         <p>I'm sorry but your browser doesn't support the <code>audio</code> element, so you can't run the demo.</p>
       </audio>
       <div class="currently-playing">
         <h2 class="song-name" id="song-name-id">-</h2>
-        <h3 class="artist-name">------</h3>
+        <!--<h3 class="artist-name"></h3>-->
       </div>
       <div class="controls">
         <div class="previous" onclick="prevMusic()"><i class="fas fa-backward"></i></div>
@@ -38,20 +38,21 @@
 
   <div id="drop-area">
     <form class="my-form">
-      <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+      <p style="margin-top: 0;">Upload multiple music or just Drag music here</p>
       <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-      <label class="button" for="fileElem">Select some files</label>
+      <label class="button" for="fileElem">Select Music</label>
     </form>
   </div>
 
-  <div>
-    <li id="playlist">
+  <div class="musicList-div">
+    <p class="musicList-header">Play List</p>
+    <ul id="playlist">
 
-    </li>
+    </ul>
   </div>
 
   <footer>
-    <p>made by Tanjim</a>
+    Made by Tanjim
   </footer>
   <script src="js/main.js"></script>
 </body>
