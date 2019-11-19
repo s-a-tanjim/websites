@@ -69,7 +69,7 @@ body {
 
 .currently-playing {
   text-align: center;
-  margin-top: -3px;
+  margin-top: -1px;
 }
 
 .song-name,
@@ -83,7 +83,7 @@ body {
   font-size: .8em;
   letter-spacing: 2.5px;
   color: #364F3C;
-  margin: 5px auto;
+  margin: 6px auto;
 }
 
 .artist-name {
@@ -104,6 +104,10 @@ body {
   font-size: .8em;
   justify-content: center;
   color: #8BA989;
+}
+
+.info:hover{
+  transform: translateY(0px);
 }
 
 .play,
@@ -247,15 +251,24 @@ body {
   padding: 2px;
 }
 
-.musicList-a{
+.musicList-p{
+  cursor: grab;
+  display: inline;
   text-decoration: none;
   color: #ddd;
   font-size: 15px;
-  transition: all .1s ease;
 }
 
-.musicList-a:hover{
+.musicList-p:hover{
   border-bottom: 1px solid #ddd;
+}
+
+.musicListSelected-p{
+  border: 1px solid #ddd;
+}
+
+.musicURLData{
+  display: none;
 }
 
 
