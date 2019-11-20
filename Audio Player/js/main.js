@@ -1,20 +1,30 @@
 var audio = document.getElementById('audio');
+document.getElementById('pause-button-id').style.display = 'none';
 
 var allMusic, totalMusicCount = 0,
   currentlyPlayingMusic = -1;
 
-var pauseFlag = 0,
-  playFlag = 0;
-
 // Event Listeners.........................
 
 audio.addEventListener('ended', nextMusic);
+
+audio.addEventListener('pause', e => {
+  document.getElementById('pause-button-id').style.display = 'none';
+  document.getElementById('play-button-id').style.display = 'block';
+});
+
+audio.addEventListener('play', e => {
+  document.getElementById('pause-button-id').style.display = 'block';
+  document.getElementById('play-button-id').style.display = 'none';
+});
+
 
 // Controls.........................
 
 function nextMusic() {
   if (parseInt(currentlyPlayingMusic) + 1 == totalMusicCount) {
     //No song available
+    pauseMusic();
     alert("Add more song please!");
     return;
   }
@@ -22,7 +32,7 @@ function nextMusic() {
 }
 
 function prevMusic() {
-  if (parseInt(currentlyPlayingMusic) == 0) {
+  if (parseInt(currentlyPlayingMusic) == 0 || parseInt(currentlyPlayingMusic) == -1) {
     //Can't go previous
     alert("Can't go previous!");
     return;
@@ -32,22 +42,18 @@ function prevMusic() {
 
 function pauseMusic() {
   if (isPlaying(audio)) {
-    if (playFlag == 1 && pauseFlag == 0)
-      toggleClassUsingClass('play', 'clicked');
-    playFlag = 0;
-    pauseFlag = 1;
-    toggleClassUsingClass('pause', 'clicked');
     audio.pause();
   }
 }
 
 function playMusic() {
+
+  if (audio.currentSrc.length == 0) {
+    alert('Please upload Music!');
+    return;
+  }
+
   if (!isPlaying(audio)) {
-    if (playFlag == 0 && pauseFlag == 1)
-      toggleClassUsingClass('pause', 'clicked');
-    playFlag = 1;
-    pauseFlag = 0;
-    toggleClassUsingClass('play', 'clicked');
     audio.play();
   }
 }
@@ -141,7 +147,11 @@ function addToList(file) {
     musicURL.innerHTML = reader.result;
     musicURL.setAttribute('class', 'musicURLData');
     list.appendChild(musicURL);
+    if (currentlyPlayingMusic == -1)
+    changeMusicAt(0);
+    console.log('called with count: '+currentlyPlayingMusic);
   }
+
 }
 
 
@@ -192,10 +202,10 @@ function selectedMusicChange(index) {
   element.classList.toggle('musicListSelected-p');
 }
 
-function changeSongName(name){
-  if(name.length>=25){
+function changeSongName(name) {
+  if (name.length >= 25) {
     name = name.substring(0, 21);
-    name=name+"...";
+    name = name + "...";
   }
   document.getElementById('song-name-id').innerHTML = name;
 }
