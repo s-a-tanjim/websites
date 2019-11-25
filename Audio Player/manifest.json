@@ -1,0 +1,35 @@
+{
+  "name":"Browser Based Music Player",
+  "short_name":"Music Player",
+  "start_url":"/index.html",
+  "scope":".",
+  "display":"standalone",
+  "background_color":"#1a3c3d",
+  "theme_color":"#3c6451",
+  "description":"You don't need to install it, just browse and play",
+  "dir":"ltr",
+  "lang":"en-US",
+  "orientation":"portrait-primary",
+  "icons":[
+    {
+      "src":"/img/icons/icons8-music-64.png",
+      "type":"image/png",
+      "sizes":"64x64"
+    },
+    {
+      "src":"/img/icons/icons8-music-128.png",
+      "type":"image/png",
+      "sizes":"128x128"
+    },
+    {
+      "src":"/img/icons/icons8-music-256.png",
+      "type":"image/png",
+      "sizes":"256x256"
+    },
+    {
+      "src":"/img/icons/icons8-music-512.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    }
+  ]
+}

@@ -9,14 +9,60 @@
   <meta name="description" content="Music Player">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/main.css">
 
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
+  <link rel="manifest" href="manifest.json">
+  <!-- If browser doesn't support manifest then those
+  meta data will help to get minimum features of manifest -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Music Player">
+  <link rel="apple-touch-icon" href="/img/icons/icons8-music-128.png" sizes="128x128">
+  <!--For edge-->
+  <meta name="msapplication-TileImage" content="/img/icons/icons8-music-128.png">
+  <meta name="msapplication-TileColor" content="#1a3c3d">
+  <meta name="theme-color" content="#3c6451">
 </head>
 
 <body class="dark-theme">
+  <nav>Music Player</nav>
+  <!-- Sidebar -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="img/background.jpeg">
+        </div>
+        <a href="#"><img class="circle" src="img/music_icon.png"></a>
+        <a href="#"><span class="white-text name">Music Player</span></a>
+      </div>
+    </li>
+    <li><a class="waves-effect" href="#" onclick="showPlayMusic();return false;"><i
+          class="material-icons">music_note</i>Play Music</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="waves-effect" href="#" onclick="showUploadMusic();return false;"><i
+          class="material-icons">playlist_add</i>Add to Playlist</a></li>
+    <li><a class="waves-effect" href="#" onclick="showPlayList();return false;"><i
+          class="material-icons">playlist_play</i>Playlist</a></li>
+    <li><a class="waves-effect" href="#"><i class="material-icons">search</i>Search Music</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="waves-effect" href="#" onclick="showSettings();return false;"><i
+          class="material-icons">settings</i>Settings</a></li>
+  </ul>
 
-  <div id="player" onmouseover="hoverEffect()" onmouseout="afterHoverEffect()">
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 38px;"
+      class="material-icons">menu</i></a>
+
+
+  <div class="playMusicArea" id="player">
     <div class="album"></div>
 
     <div class="info" id="toggleEffect">
@@ -35,7 +81,7 @@
     </div>
   </div>
 
-  <div id="drop-area">
+  <div class="uploadMusicArea" id="drop-area" style="display: none;">
     <form class="my-form">
       <p style="margin-top: 0;">Upload multiple music or just Drag music here</p>
       <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
@@ -43,17 +89,26 @@
     </form>
   </div>
 
-  <div class="musicList-div">
+  <div class="musicList-div playlistArea" style="display: none;">
     <p class="musicList-header">Play List</p>
     <ul id="playlist">
 
     </ul>
   </div>
 
-  <footer>
-    Made by Tanjim
-  </footer>
+  <div class="settingsArea" style="display: none;">
+    settings
+  </div>
+
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      //var instances = M.Sidenav.init(elems, options);
+    });
+  </script>
 </body>
 
 </html>

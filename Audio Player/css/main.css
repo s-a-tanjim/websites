@@ -2,14 +2,32 @@ body {
   margin: 0 auto;
 }
 
+/*
 .dark-theme {
   background-color: #1a3c3d;
   color: #FFFFFF;
+}*/
+
+.dark-theme {
+  background-color: #485563;
+  color: #FFFFFF;
+}
+
+nav{
+  text-align: center;
+  font-size: 28px;
+  background-color: #29323c;
+  margin-bottom: 17px;
 }
 
 .light-theme {
   background-color: #FFFFFF;
   color: #3c6451;
+}
+
+.sidenav-trigger{
+  margin-left: 17px;
+  color: #ddd;
 }
 
 #player {
@@ -45,7 +63,7 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background: rgba(255, 255, 255, .85);
+  background: rgba(255, 255, 255, .75);
   transform: translateY(35px);
   transition: all .5s ease-in-out;
 }
@@ -61,8 +79,8 @@ body {
 }
 
 #audio {
-  background: #ffffff;
-  filter: brightness(95%);
+  background: rgba(255, 255, 255, .75);
+  filter: brightness(90%);
   height: 40px;
   width: 100%;
 }

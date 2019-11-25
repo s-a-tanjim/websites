@@ -210,6 +210,42 @@ function changeSongName(name) {
   document.getElementById('song-name-id').innerHTML = name;
 }
 
+function displayNoneAll(){
+  var x;
+  x= document.getElementsByClassName('playMusicArea');
+  x[0].style.display='none';
+  x=document.getElementsByClassName('uploadMusicArea');
+  x[0].style.display='none';
+  x=document.getElementsByClassName('playlistArea');
+  x[0].style.display='none';
+  x=document.getElementsByClassName('settingsArea');
+  x[0].style.display='none';
+}
+
+function showPlayMusic(){
+  displayNoneAll();
+  var x= document.getElementsByClassName('playMusicArea');
+  x[0].style.display='block';
+}
+
+function showUploadMusic(){
+  displayNoneAll();
+  var x= document.getElementsByClassName('uploadMusicArea');
+  x[0].style.display='block';
+}
+
+function showPlayList(){
+  displayNoneAll();
+  var x= document.getElementsByClassName('playlistArea');
+  x[0].style.display='block';
+}
+
+function showSettings(){
+  displayNoneAll();
+  var x= document.getElementsByClassName('settingsArea');
+  x[0].style.display='block';
+}
+
 /*
 //like & shuffle button
 $('.heart').click(function(){
