@@ -28,10 +28,10 @@
   <meta name="theme-color" content="#3c6451">
 </head>
 
-<body class="dark-theme">
+<body id="main-body" class="dark-theme">
   <nav>Music Player</nav>
   <!-- Sidebar -->
-  <ul id="slide-out" class="sidenav">
+  <ul id="slide-out" class="sidenav sidenav-close">
     <li>
       <div class="user-view">
         <div class="background">
@@ -61,23 +61,28 @@
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 38px;"
       class="material-icons">menu</i></a>
 
-
-  <div class="playMusicArea" id="player">
-    <div class="album"></div>
-
-    <div class="info" id="toggleEffect">
-      <audio id="audio" src="" controls>
-        <p>Sorry but your browser doesn't support the <code>audio</code></p>
-      </audio>
-      <div class="currently-playing">
-        <h2 class="song-name" id="song-name-id">---</h2>
+  <div class="playMusicArea">
+    <div class="" id="player">
+      <div class="album"></div>
+      <div class="info" id="toggleEffect">
+        <audio id="audio" src="" controls>
+          <p>Sorry but your browser doesn't support the <code>audio</code></p>
+        </audio>
+        <div class="currently-playing">
+          <h2 class="song-name" id="song-name-id">---</h2>
+        </div>
+        <div class="controls">
+          <div class="previous" onclick="prevMusic()"><i class="fas fa-backward"></i></div>
+          <div class="play" id="play-button-id" onclick="playMusic()"><i class="fas fa-play"></i></div>
+          <div class="pause" id="pause-button-id" onclick="pauseMusic()"><i class="fas fa-pause"></i></div>
+          <div class="next" onclick="nextMusic()"><i class="fas fa-forward"></i></div>
+        </div>
       </div>
-      <div class="controls">
-        <div class="previous" onclick="prevMusic()"><i class="fas fa-backward"></i></div>
-        <div class="play" id="play-button-id" onclick="playMusic()"><i class="fas fa-play"></i></div>
-        <div class="pause" id="pause-button-id" onclick="pauseMusic()"><i class="fas fa-pause"></i></div>
-        <div class="next" onclick="nextMusic()"><i class="fas fa-forward"></i></div>
-      </div>
+    </div>
+
+    <div style="margin-top: 30px;text-align: center;">
+      <a class="btn-floating btn-large waves-effect waves-light red"  href="#" onclick="showUploadMusic();return false;"><i class="material-icons">add</i></a>
+      <p style="margin-top: 2px;">Add Music</p>
     </div>
   </div>
 
@@ -97,7 +102,15 @@
   </div>
 
   <div class="settingsArea" style="display: none;">
-    settings
+    <div class="settings-card">
+      <p>Theme Settings</p>
+      <div>Theme Type:
+        <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+        <label for="id-name--1" class="switch-label"><span id="light-theme-id" class="toggle--on"> Light Theme</span>
+          <span class="toggle--off">Dark Theme</span>
+        </label>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.js"></script>

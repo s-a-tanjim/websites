@@ -149,7 +149,7 @@ function addToList(file) {
     list.appendChild(musicURL);
     if (currentlyPlayingMusic == -1)
     changeMusicAt(0);
-    console.log('called with count: '+currentlyPlayingMusic);
+    //console.log('called with count: '+currentlyPlayingMusic);
   }
 
 }
@@ -171,7 +171,7 @@ function changeMusic(data) {
   currentlyPlayingMusic = data.childNodes[0].getAttribute('id');
   selectedMusicChange(parseInt(currentlyPlayingMusic)); // select present
 
-  console.log("Currently playing: " + currentlyPlayingMusic);
+  //console.log("Currently playing: " + currentlyPlayingMusic);
 }
 
 function changeMusicAt(index) {
@@ -189,10 +189,31 @@ function changeMusicAt(index) {
   currentlyPlayingMusic = data.childNodes[0].getAttribute('id');
   selectedMusicChange(parseInt(currentlyPlayingMusic)); // select present
 
-  console.log("Currently playing: " + currentlyPlayingMusic);
+  //console.log("Currently playing: " + currentlyPlayingMusic);
 }
 
 // Changing music end!!...............
+
+// Settings.....................
+
+document.getElementById('id-name--1').addEventListener('click',changeTheme);
+var darkThemeFlag=1;
+function changeTheme(x){
+  if(darkThemeFlag){
+    darkThemeFlag=0;
+    document.getElementById('main-body').classList.toggle('dark-theme');
+    document.getElementById('main-body').classList.toggle('light-theme');
+    //console.log('Light Theme');
+  }else{
+    darkThemeFlag=1;
+    document.getElementById('main-body').classList.toggle('light-theme');
+    document.getElementById('main-body').classList.toggle('dark-theme');
+    //console.log('Dark Theme');
+  }
+  
+}
+
+// Settings End!!................
 
 // UI
 
