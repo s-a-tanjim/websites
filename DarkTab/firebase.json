@@ -1,0 +1,9 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": [ {
+    "target": "dark-tab",
+    "public": "DarkTab/"
+  }]
+}

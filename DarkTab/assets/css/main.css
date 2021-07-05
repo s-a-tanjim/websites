@@ -1,0 +1,97 @@
+body {
+  background-color: #23272a;
+  color: #fff;
+  font-family: 'space_monoregular';
+  font-size: 20px;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+tbody:before {
+  line-height: 1em;
+  content: "\200C";
+  display: block;
+}
+
+.default-btn {
+  background-color: #2abe99;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.default-btn:hover {
+  cursor: pointer;
+}
+
+input {
+  width: 96%;
+  height: 27px;
+  border-radius: 5px;
+  padding: 1px 8px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.no-text-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.task-typ-td {
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  word-break: break-word;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-typ-td div {
+  padding: 5px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.selected-task-typ {
+  background-color: #424242 !important;
+}
+
+.task-cls-btn {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: #23272a;
+  color: #fff;
+  font-size: 1em;
+  z-index: 10;
+}
+
+.task-cls-btn span {
+  display: none;
+}
+
+.task-typ-td:hover,
+.task-typ-td:hover .task-cls-btn {
+  background-color: #616161;
+}
+
+.task-typ-td:hover span {
+  display: inline-block;
+}
+
+.task-cls-btn:hover {
+  color: #ff5f52;
+}

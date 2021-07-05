@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002Ffiles\u002Fstatic\u002F1625483935",layout:"default",error:a,state:{allTaskData:[],indexedDB:{DB_NAME:"darktabdb",DB_VERSION:1,indexedDdexedDB:a,dataBase:a}},serverRendered:true,routePath:b,config:{_app:{basePath:b,assetsPath:"\u002Ffiles\u002F",cdnURL:a}}}}(null,"\u002F"));

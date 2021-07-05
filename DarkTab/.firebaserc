@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dark-tab"
+  },
+  "targets": {
+    "dark-tab": {
+      "hosting": {
+        "dark-tab": [
+          "dark-tab"
+        ]
+      }
+    }
+  }
+}

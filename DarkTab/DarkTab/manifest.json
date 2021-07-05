@@ -1,0 +1,35 @@
+{
+  "name":"DarkTab",
+  "short_name":"DarkTab",
+  "start_url":"/index.html",
+  "scope":".",
+  "display":"standalone",
+  "background_color":"#23272a",
+  "theme_color":"#2abe99",
+  "description":"A Task Manager Tool",
+  "dir":"ltr",
+  "lang":"en-US",
+  "orientation":"portrait-primary",
+  "icons":[
+    {
+      "src":"/img/tasks-64.png",
+      "type":"image/png",
+      "sizes":"64x64"
+    },
+    {
+      "src":"/img/tasks-128.png",
+      "type":"image/png",
+      "sizes":"128x128"
+    },
+    {
+      "src":"/img/tasks-256.png",
+      "type":"image/png",
+      "sizes":"256x256"
+    },
+    {
+      "src":"/img/tasks-512.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    }
+  ]
+}
