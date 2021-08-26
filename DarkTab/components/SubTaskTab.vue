@@ -23,7 +23,7 @@
             </button>
           </td>
           <td v-else>
-            <taskinput @press-enter="addTask" />
+            <taskinput @press-enter="addTask" @blur="showInputField = false" />
           </td>
         </tr>
       </tbody>

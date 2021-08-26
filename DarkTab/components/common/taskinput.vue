@@ -1,6 +1,11 @@
 <template>
   <form v-on:submit.prevent="$emit('press-enter', inputData)">
-    <input type="text" ref="taskinput" v-model="inputData" />
+    <input
+      type="text"
+      ref="taskinput"
+      v-model="inputData"
+      @blur="$emit('blur', inputData)"
+    />
   </form>
 </template>
 

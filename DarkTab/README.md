@@ -1,5 +1,5 @@
 # DarkTab
-A Task manager website
+A Task managing tool
 Live site: [link](https://dark-tab.web.app/)
 
 ## Build Setup

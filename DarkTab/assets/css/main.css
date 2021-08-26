@@ -49,6 +49,11 @@ input:focus {
   user-select: none;
 }
 
+.sub-title {
+  text-align: center;
+  padding: 20px 5px;
+}
+
 .task-typ-td {
   cursor: pointer;
   border-radius: 5px;
@@ -95,3 +100,8 @@ input:focus {
 .task-cls-btn:hover {
   color: #ff5f52;
 }
+
+/* Drop zone */
+/*
+.drop-zone {}
+*/
